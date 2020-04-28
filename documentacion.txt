@@ -1,0 +1,61 @@
+Tecnologias utilizadas en movie Administration
+{
+    react js,
+    node js y express,
+    pogresSql
+}
+
+Incidencias
+{
+    Tuve inconvenientas para manejar las imagenes del lado del servidor,
+    un poco con la logica de negocio osea en la forma que deberia de realizarse el programa y funciones que deberia hacer.
+}
+
+{
+    Con esta prueba pude observar que antes de programar o ir a configurar algo, hay que tener bien pensada
+    y estrucuturada la manera en que el programa va funciones, definir bien su comportamiento y luego traducirlo a codigo,
+    que es muy importante tratar de definir mediante diagramas o pseudocodigo antes de empezar a crear codigo.
+
+    Esta gran lección me llevo.
+
+    Tambien para manejar las fechas encontre el componente react-datepicker que me ayudo mucho y ahorrar un poco de trabajo
+    Considero que es una buena solucion para estos fines.
+
+    Tambien este proyecto me dio a relucir algunas puntos que tengo que mejorar y seguir practicando.
+}
+
+Diccionario de datos
+{
+    ACTOR
+    campo     tamaño     tipo de dato         descripcion
+    id         11           entero             Clave unica del registro de Actores
+    name       150          caracter           Nombre del Actor
+    DateBirtht              fecha              fecha de nacimineto del Actor
+    photo                   blob               foto del actor
+
+    MOVIE
+    id         11           entero             Clave unica del registro de la MOVIE
+    title      150          caracter           titulo de la pelicula
+    gender     50           caracter           genero de la pelicula
+    actor_id                entero             id del actor relacion con las peliculas
+    datereleased            fecha              fecha del lanzamiento
+    photo                   blob               Foto/poster de la pelicula
+}
+
+ENDPOINTS API en la carpeta routes
+
+Actor 
+url                       method             Descripcion
+/actor                    get                desplega todos los actores
+/actorandmovie/:id        get                trae un solo actor relacionado con su pelicula
+/actor/:id                get                trae un solo actor
+/actor                    post               insertar un actor
+/actor/editar/:id         put                Actualizar un actor
+
+
+Movie
+url                       method             Descripcion
+/movie                    get                desplega todos las peliculas
+/movie/:id                get                trae una sola pelicula
+/movie                    post               insertar una pelicula
+/moie/editar/:id          put                Actualizar una pelicula
